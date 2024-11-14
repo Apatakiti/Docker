@@ -53,7 +53,7 @@ wsl -d Ubuntu
 groups (docker will have been added to the group)
 docker-compose up --build
 ........................
-
+docker buildx build . //visible on docker desktop
 
 ......................................
 installation...
@@ -78,3 +78,23 @@ wsl -d Ubuntu
 
 Verify WSL is Installed:
 wsl --list --verbose
+
+...........................................
+
+Checking all containers are running using:
+
+docker-compose ps
+
+Status as "Up" for all services.
+
+curl http://localhost:3000
+
+Ports
+
+71     :80/tcp
+
+Host port
+Volumes
+
+Host path Container path
+Environment variables Value
