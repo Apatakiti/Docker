@@ -1,0 +1,80 @@
+mv subfolder/* subfolder/.* .
+
+MINGW64 ~/Desktop/docker (main)
+$ wsl -d Ubuntu
+:/mnt/c/Users/username/Desktop/docker$ docker --version
+Docker version 24.0.5, build ced0996
+
+:/mnt/c/Users/username/Desktop/docker$ docker-compose --version
+Docker Compose version v2.20.3
+
+FOR DOCKERFILE SINGLE CONTAINER
+
+Building and Running the Docker Container
+Build the Docker image:
+
+Run command in the terminal from the root of your project directory:
+
+docker build -t my-react-app .
+
+Run the Docker container:
+
+docker run -p 3000:80 my-app
+
+visit http://localhost:3000
+
+FOR MULTIPLE CONTAINER
+
+Commands for Managing the Containers
+
+docker-compose build
+
+docker-compose up
+
+To stop the containers:
+
+docker-compose down
+
+To rebuild the containers after making changes:
+
+docker-compose up --build
+
+since its Linux...
+sudo docker-compose up --build
+
+but can add DOCKER to group to use
+docker-compose up --build
+
+how to add to group... run
+sudo groupadd docker
+sudo usermod -aG docker $USER
+wsl --shutdown
+wsl -d Ubuntu
+groups (docker will have been added to the group)
+docker-compose up --build
+........................
+
+
+......................................
+installation...
+......................................
+wsl --install  //ubuntu install by default
+
+then install docker:
+
+sudo snap install docker 
+//docker and docker-compose will be installed
+
+This message is shown once a day. To disable it please create the
+/home/bjbkj/.hushlogin file. //for login to wsl (ubuntu)
+
+Start Menu and search installed Linux distribution (e.g., Ubuntu), for application installed
+
+Open ubuntu from Powershell
+wsl
+
+Specific Distribution:
+wsl -d Ubuntu
+
+Verify WSL is Installed:
+wsl --list --verbose
